@@ -89,9 +89,14 @@ def compare_methods(filename):
     ips_hyperloglog = hyperloglog_load_ips(ips)
     hyperloglog_time = time.perf_counter() - start_time
 
-    print(f"{'Results of comparison:':<40}" f"{'Exact count':<20}{'HyperLogLog':<20}")
-    print(f"{'Unique elements':<40}{ips_exact:<20}{ips_hyperloglog:<20}")
-    print(f"{'Execution time (s)':<40}{exact_time:<20.10f}{hyperloglog_time:<20.10f}")
+    print(
+        f"|{'Results of comparison:':<25}|" f"{'Exact count':^20}|{'HyperLogLog':^20}|"
+    )
+    print("-" * 70)
+    print(f"|{'Unique elements':<25}|{ips_exact:^20}|{ips_hyperloglog:^20}|")
+    print(
+        f"|{'Execution time (s)':<25}|{exact_time:^20.10f}|{hyperloglog_time:^20.10f}|"
+    )
 
 
 if __name__ == "__main__":

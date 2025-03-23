@@ -27,7 +27,7 @@ def check_password_uniqueness(bloom_passwords, passwords):
                 break
         results[password] = result
 
-        # print(f"Пароль '{password}' - {result}.")
+        # print(f"Password '{password}' - {result}.")
     return results
 
 
@@ -46,4 +46,4 @@ if __name__ == "__main__":
 
     # Print results
     for password, status in results.items():
-        print(f"Пароль '{password}' - {status}.")
+        print(f"Password '{password}' - {status}.")
